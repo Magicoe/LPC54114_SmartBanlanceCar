@@ -1,0 +1,208 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: aa Microsoft, Microsoft, LIC=9N0ZB-LC3BU-MT4H5-Z2V38-NJ0C2-Q06LT
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.23
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DCM.DLL V1.15.0.0
+Target DLL:      UL2CM3.DLL V1.159.7.0
+Dialog DLL:      TCM.DLL V1.27.0.0
+ 
+<h2>Project:</h2>
+C:\NXP Working File\NXP\lpc_sample\LPC54110\4. Software\smartbalance\proj_keil\smart_balance_car\smart_balance_car.uvprojx
+Project File Date:  08/23/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Debug In Flash'
+assembling startup_LPC54114_cm4.s...
+compiling kalman_filter.c...
+compiling attitude_control.c...
+..\..\applications\smart_balance_car\attitude_control.c(4): error:  #5: cannot open source input file "bsp_motor.h": No such file or directory
+  #include "bsp_motor.h"
+..\..\applications\smart_balance_car\attitude_control.c: 0 warnings, 1 error
+compiling main.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\applications\smart_balance_car\main.c: 1 warning, 0 errors
+compiling driver_spi_mpu9250.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\applications\smart_balance_car\driver_spi_mpu9250.c(205): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i;
+..\..\applications\smart_balance_car\driver_spi_mpu9250.c: 2 warnings, 0 errors
+compiling fsl_adc.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_adc.h(99): warning:  #66-D: enumeration value is out of "int" range
+      kADC_OverrunInterruptFlag = 1U << 31U,          /*!< Overrun interrupt flag. */
+..\..\csp_lpc54114\fsl_adc.c: 2 warnings, 0 errors
+compiling fsl_common.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_common.c: 1 warning, 0 errors
+compiling fsl_clock.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_power.h(75): warning:  #66-D: enumeration value is out of "int" range
+      kPDRUNCFG_ForceUnsigned = 0x80000000U
+..\..\csp_lpc54114\fsl_clock.c: 2 warnings, 0 errors
+compiling fsl_crc.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_crc.c: 1 warning, 0 errors
+compiling fsl_ctimer.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_ctimer.c: 1 warning, 0 errors
+compiling fsl_debug_console.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_debug_console.c: 1 warning, 0 errors
+compiling fsl_dma.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_dma.c: 1 warning, 0 errors
+compiling fsl_dmic.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_dmic.c: 1 warning, 0 errors
+compiling fsl_dmic_dma.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_dmic_dma.c: 1 warning, 0 errors
+compiling fsl_flashiap.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_flashiap.c: 1 warning, 0 errors
+compiling fsl_flexcomm.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_flexcomm.c: 1 warning, 0 errors
+compiling fsl_fmeas.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_fmeas.c: 1 warning, 0 errors
+compiling fsl_gint.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_gint.c: 1 warning, 0 errors
+compiling fsl_gpio.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_gpio.c: 1 warning, 0 errors
+compiling fsl_i2c_dma.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_i2c_dma.c: 1 warning, 0 errors
+compiling fsl_i2c.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_i2c.c: 1 warning, 0 errors
+compiling fsl_i2s.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_i2s.c: 1 warning, 0 errors
+compiling fsl_i2s_dma.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_i2s_dma.c: 1 warning, 0 errors
+compiling fsl_inputmux.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_inputmux.c: 1 warning, 0 errors
+compiling fsl_mrt.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_mrt.c: 1 warning, 0 errors
+compiling fsl_pint.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_pint.c: 1 warning, 0 errors
+compiling fsl_power.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_power.h(75): warning:  #66-D: enumeration value is out of "int" range
+      kPDRUNCFG_ForceUnsigned = 0x80000000U
+..\..\csp_lpc54114\fsl_power.c: 2 warnings, 0 errors
+compiling fsl_reset.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_reset.c: 1 warning, 0 errors
+compiling fsl_rtc.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_rtc.c: 1 warning, 0 errors
+compiling fsl_sctimer.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_sctimer.h(252): warning:  #66-D: enumeration value is out of "int" range
+          (1U << SCT_CONFLAG_BUSERRH_SHIFT) /*!< Bus error due to write when H counter was not halted */
+..\..\csp_lpc54114\fsl_sctimer.c: 2 warnings, 0 errors
+compiling fsl_spi.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_spi.c: 1 warning, 0 errors
+compiling fsl_spi_dma.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_spi_dma.c: 1 warning, 0 errors
+compiling fsl_usart.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_usart.c: 1 warning, 0 errors
+compiling fsl_usart_dma.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_usart_dma.c: 1 warning, 0 errors
+compiling fsl_utick.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_power.h(75): warning:  #66-D: enumeration value is out of "int" range
+      kPDRUNCFG_ForceUnsigned = 0x80000000U
+..\..\csp_lpc54114\fsl_utick.c: 2 warnings, 0 errors
+compiling fsl_wwdt.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_wwdt.c: 1 warning, 0 errors
+compiling system_LPC54114_cm4.c...
+compiling board.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\bsp_smartbalance\board.c: 1 warning, 0 errors
+compiling clock_config.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_power.h(75): warning:  #66-D: enumeration value is out of "int" range
+      kPDRUNCFG_ForceUnsigned = 0x80000000U
+..\..\bsp_smartbalance\clock_config.c: 2 warnings, 0 errors
+compiling pin_mux.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\bsp_smartbalance\pin_mux.c(125): warning:  #177-D: variable "port0_pin11_config"  was declared but never referenced
+    const uint32_t port0_pin11_config = (
+..\..\bsp_smartbalance\pin_mux.c: 2 warnings, 0 errors
+".\Objects\mpu9250_spi_int.axf" - 1 Error(s), 44 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Debug_In_Flash
+  C:\Keil_v5\ARM\PACK\Keil\LPC54000_DFP\2.2.0\LPCOpen\lpc5411x\chip_5411x\inc
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:12
+</pre>
+</body>
+</html>

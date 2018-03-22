@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: aa Microsoft, Microsoft, LIC=9N0ZB-LC3BU-MT4H5-Z2V38-NJ0C2-Q06LT
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.23
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DCM.DLL V1.15.0.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.27.0.0
+ 
+<h2>Project:</h2>
+C:\NXP Working File\NXP\lpc_sample\LPC54110\4. Software\smartbalance\proj_keil\0.all_in_one\all_in_one.uvprojx
+Project File Date:  10/17/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Debug In Flash'
+compiling main.c...
+..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+..\..\csp_lpc54114\fsl_power.h(75): warning:  #66-D: enumeration value is out of "int" range
+      kPDRUNCFG_ForceUnsigned = 0x80000000U
+..\..\applications\all_in_one\main.c(124): warning:  #223-D: function "mpu9250_read_task" declared implicitly
+      mpu9250_read_task();
+..\..\applications\all_in_one\main.c(230): warning:  #167-D: argument of type "volatile Motor_EncCntVal_T *" is incompatible with parameter of type "Motor_EncCntVal_T *"
+                  gSpeedPwmOut = Motor_SpeedPwmControl(&gMotorEncCntVal, gTargetSpeed, gMotorStopFlag);
+..\..\applications\all_in_one\main.c(233): warning:  #223-D: function "Motor_TurnPwmControl" declared implicitly
+                  gTurnPwmOut = Motor_TurnPwmControl(gTargetTurn, g_MPU9250SensorData.GyrZ);
+..\..\applications\all_in_one\main.c: 5 warnings, 0 errors
+linking...
+..\..\applications\LPC54114J256_cm4.scf(116): warning: L6314W: No section matches pattern *(rpmsg_sh_mem_section).
+..\..\applications\LPC54114J256_cm4.scf(122): warning: L6314W: No section matches pattern *(M0CODE).
+Program Size: Code=24368 RO-data=1832 RW-data=340 ZI-data=8008  
+Finished: 0 information, 2 warning and 0 error messages.
+".\Objects\mpu9250_spi_int.out" - 0 Error(s), 7 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Debug_In_Flash
+  C:\Keil_v5\ARM\PACK\Keil\LPC54000_DFP\2.2.0\LPCOpen\lpc5411x\chip_5411x\inc
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

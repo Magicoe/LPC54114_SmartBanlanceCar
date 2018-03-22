@@ -1,0 +1,36 @@
+
+T2BC8 000:191 SEGGER J-Link V6.16d Log File (0002ms, 0050ms total)
+T2BC8 000:191 DLL Compiled: Jun 21 2017 19:08:15 (0002ms, 0050ms total)
+T2BC8 000:191 Logging started @ 2017-08-25 15:39 (0002ms, 0050ms total)
+T2BC8 000:193 JLINK_SetWarnOutHandler(...) (0000ms, 0050ms total)
+T2BC8 000:193 JLINK_OpenEx(...)
+Firmware: J-Link LPC-Link 2 compiled Feb  1 2013 19:54:01
+Hardware: V1.00
+S/N: 611000000
+Feature(s): GDBWEBSRV Webserver running on local port 19080 (0026ms, 0076ms total)
+T2BC8 000:193   returns O.K. (0026ms, 0076ms total)
+T2BC8 000:219 JLINK_SetErrorOutHandler(...) (0000ms, 0076ms total)
+T2BC8 000:219 JLINK_ExecCommand("ProjectFile = "C:\NXP Working File\NXP\lpc_sample\LPC54110\4. Software\smartbalance\proj_keil\tb6612fng_pwm\JLinkSettings.ini"", ...). C:\Program Files (x86)\SEGGER\JLink_V616d\JLinkDevices.xml evaluated successfully.  returns 0x00 (0116ms, 0192ms total)
+T2BC8 000:335 JLINK_ExecCommand("Device = LPC54114J256BD64:M4", ...). Device "LPC54112J256_M4" selected.  returns 0x00 (0003ms, 0195ms total)
+T2BC8 000:338 JLINK_ExecCommand("DisableConnectionTimeout", ...).   returns 0x01 (0000ms, 0195ms total)
+T2BC8 000:338 JLINK_GetHardwareVersion()  returns 0x2710 (0000ms, 0195ms total)
+T2BC8 000:338 JLINK_GetDLLVersion()  returns 61604 (0000ms, 0195ms total)
+T2BC8 000:338 JLINK_GetFirmwareString(...) (0001ms, 0196ms total)
+T2BC8 000:339 JLINK_GetDLLVersion()  returns 61604 (0000ms, 0196ms total)
+T2BC8 000:339 JLINK_GetCompileDateTime() (0000ms, 0196ms total)
+T2BC8 000:339 JLINK_GetFirmwareString(...) (0000ms, 0196ms total)
+T2BC8 000:339 JLINK_GetHardwareVersion()  returns 0x2710 (0000ms, 0196ms total)
+T2BC8 000:339 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0007ms, 0203ms total)
+T2BC8 000:346 JLINK_SetSpeed(1000) (0002ms, 0205ms total)
+T2BC8 000:348 JLINK_SetResetType(JLINKARM_RESET_TYPE_ADI)  returns JLINKARM_RESET_TYPE_HALT_WP (0000ms, 0205ms total)
+T2BC8 000:348 JLINK_Reset() >0x10B TIF> >0x10F TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x10B TIF> >0x10F TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x10B TIF> >0x10F TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x10B TIF> >0x10F TIF>JLINK_GetId() >0x10B TIF> >0x10F TIF>
+RESET (pin 15) high, but should be low. Please check target hardware. >0x10B TIF> >0x10F TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x10B TIF> >0x10F TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x10B TIF> >0x10F TIF>  returns 0x00000000 (0950ms, 2088ms total)
+T2BC8 002:233 JLINK_GetId() >0x10B TIF> >0x10F TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x10B TIF> >0x10F TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x10B TIF> >0x10F TIF>RESET (pin 15) high, but should be low. Please check target hardware. >0x10B TIF> >0x10F TIF>  returns 0x00000000 (0920ms, 3008ms total)
+T2BC8 003:155 JLINK_GetFirmwareString(...) (0000ms, 3008ms total)
+T1D60 003:155 
+  ***** Error: Connection to emulator lost! (5670ms, 8678ms total)
+T1D60 003:155 
+  ***** Error: Connection to emulator lost! (538780ms, 541788ms total)
+T2BC8 1363:647 JLINK_Close() (0009ms, 3017ms total)
+T2BC8 1363:647  (0009ms, 3017ms total)
+T2BC8 1363:647 Closed (0009ms, 3017ms total)
