@@ -1,0 +1,58 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: aa Microsoft, Microsoft, LIC=47GJJ-U54DD-DK7BN-Y1YXF-NF08E-I0IH3
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DARMCM1.DLL V1.18.0.0
+Target DLL:      UL2CM3.DLL V1.160.3.0
+Dialog DLL:      TARMCM1.DLL V1.13.0.0
+ 
+<h2>Project:</h2>
+F:\LPC54114_SmartBanlanceCar\code\proj_keil\7.qei_dualcore\qei_dc_m0p.uvprojx
+Project File Date:  03/22/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build Project 'qei_dc_m0p' - Target 'Debug In Flash'
+compiling main_m0p.c...
+F:\LPC54114_SmartBanlanceCar\code\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
+      kNONE_to_NONE = 0x80000000U,
+F:\LPC54114_SmartBanlanceCar\code\csp_lpc54114\fsl_power.h(75): warning:  #66-D: enumeration value is out of "int" range
+      kPDRUNCFG_ForceUnsigned = 0x80000000U
+..\..\applications\qei_dualcore\main_m0p.c: 2 warnings, 0 errors
+linking...
+F:\LPC54114_SmartBanlanceCar\code\applications\LPC54114J256_cm0plus.scf(111): warning: L6314W: No section matches pattern *(rpmsg_sh_mem_section).
+Program Size: Code=3384 RO-data=500 RW-data=48 ZI-data=4512  
+Finished: 0 information, 1 warning and 0 error messages.
+After Build - User command #1: C:\Keil_v5\\ARM\ARMCC\bin\fromelf.exe --bincombined --bincombined_base=0x20010000 --output=F:\LPC54114_SmartBanlanceCar\code\proj_keil\7.qei_dualcore\Objects_m0p\core1_image.bin .\Objects_m0p\qei_dualcore_m0p.out
+".\Objects_m0p\qei_dualcore_m0p.out" - 0 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC54000_DFP.2.6.0.pack
+                Keil.LPC54000_DFP.2.6.0
+                NXP LPC54000 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Debug_In_Flash
+  C:\Keil_v5\ARM\PACK\Keil\LPC54000_DFP\2.6.0\LPCOpen\lpc5411x\chip_5411x\inc
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

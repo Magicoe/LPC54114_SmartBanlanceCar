@@ -10,12 +10,13 @@
       <TargetName>Debug In Flash</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC54114J256BD64:M4</Device>
           <Vendor>NXP</Vendor>
-          <PackID>Keil.LPC54000_DFP.2.2.0</PackID>
+          <PackID>Keil.LPC54000_DFP.2.6.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00028000) IRAM2(0x04000000,0x00008000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -335,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>CPU_LPC54114J256BD64_cm4</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\applications\qei_sct;..\..\bsp_smartbalance;..\..\csp_lpc54114;..\..\components\ble;..\..\components\ble\fw;..\..\components\ble\qn_app;..\..\components\ble\qn_config;..\..\components\ble\qn_eaci;..\..\components\ble\qn_isp;..\..\components\mpu9250;..\..\components\tb6612fng;..\..\components\kalman_filter;..\..\components\attitude_control</IncludePath>
+              <IncludePath>..\..\applications\qei_sct;..\..\bsp_smartbalance;..\..\csp_lpc54114;..\..\components\ble;..\..\components\ble\fw;..\..\components\ble\qn_app;..\..\components\ble\qn_config;..\..\components\ble\qn_eaci;..\..\components\ble\qn_isp;..\..\components\mpu9250;..\..\components\tb6612fng;..\..\components\kalman_filter;..\..\components\attitude_control;..\..\components\rtt_jlink;..\..\components\motor_control</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -748,6 +749,26 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt_jlink</GroupName>
+          <Files>
+            <File>
+              <FileName>RTT_Syscalls_KEIL.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\components\rtt_jlink\RTT_Syscalls_KEIL.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\components\rtt_jlink\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\components\rtt_jlink\SEGGER_RTT_printf.c</FilePath>
             </File>
           </Files>
         </Group>

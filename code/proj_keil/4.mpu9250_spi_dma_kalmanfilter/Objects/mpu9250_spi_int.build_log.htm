@@ -3,51 +3,56 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.23.0.0
+IDE-Version: ¦ÌVision V5.24.2.0
 Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: aa Microsoft, Microsoft, LIC=9N0ZB-LC3BU-MT4H5-Z2V38-NJ0C2-Q06LT
+License Information: aa Microsoft, Microsoft, LIC=47GJJ-U54DD-DK7BN-Y1YXF-NF08E-I0IH3
  
 Tool Versions:
-Toolchain:       MDK-ARM Professional  Version: 5.23
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
 Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 4 (build 422)
-Assembler:       Armasm.exe V5.06 update 4 (build 422)
-Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
-Library Manager: ArmAr.exe V5.06 update 4 (build 422)
-Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
-CPU DLL:         SARMCM3.DLL V5.23
-Dialog DLL:      DCM.DLL V1.15.0.0
-Target DLL:      CMSIS_AGDI.dll V1.27.5.0
-Dialog DLL:      TCM.DLL V1.27.0.0
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      UL2CM3.DLL V1.160.3.0
+Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
-C:\NXP Working File\NXP\lpc_sample\LPC54110\4. Software\smartbalance\proj_keil\4.mpu9250_spi_dma_kalmanfilter\mpu9250_spi_dma_kalmanfilter.uvprojx
-Project File Date:  09/07/2017
+C:\Users\nxp58695\OneDrive - NXP\NXP_Proj\LPC54114_SmartBanlanceCar\code\proj_keil\4.mpu9250_spi_dma_kalmanfilter\mpu9250_spi_dma_kalmanfilter.uvprojx
+Project File Date:  03/22/2018
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Debug In Flash'
-compiling main_mpu9250_kalmanfilter.c...
-..\..\csp_lpc54114\fsl_clock.h(443): warning:  #66-D: enumeration value is out of "int" range
-      kNONE_to_NONE = 0x80000000U,
-..\..\applications\mpu9250_spi_dma_kalmanfilter\main_mpu9250_kalmanfilter.c(104): warning:  #167-D: argument of type "volatile KalmanFilter_InputPosData_T *" is incompatible with parameter of type "KalmanFilter_InputPosData_T *"
-          gAppKalmanAngle                   = KalmanFilter_Process(&gAppKalmanPosData, &gAppKalmanPosDataOffset);
-..\..\applications\mpu9250_spi_dma_kalmanfilter\main_mpu9250_kalmanfilter.c(104): warning:  #167-D: argument of type "volatile KalmanFilter_InputPosData_T *" is incompatible with parameter of type "KalmanFilter_InputPosData_T *"
-          gAppKalmanAngle                   = KalmanFilter_Process(&gAppKalmanPosData, &gAppKalmanPosDataOffset);
-..\..\applications\mpu9250_spi_dma_kalmanfilter\main_mpu9250_kalmanfilter.c: 3 warnings, 0 errors
+compiling SEGGER_RTT_printf.c...
+..\..\components\rtt_jlink\SEGGER_RTT_printf.c(299): warning:  #111-D: statement is unreachable
+          default:  goto FilterFieldWidth;                   break;
+..\..\components\rtt_jlink\SEGGER_RTT_printf.c: 1 warning, 0 errors
+compiling SEGGER_RTT.c...
+compiling RTT_Syscalls_KEIL.c...
 linking...
 ..\..\applications\LPC54114J256_cm4.scf(116): warning: L6314W: No section matches pattern *(rpmsg_sh_mem_section).
 ..\..\applications\LPC54114J256_cm4.scf(122): warning: L6314W: No section matches pattern *(M0CODE).
-Program Size: Code=19060 RO-data=1728 RW-data=104 ZI-data=4168  
+Program Size: Code=19652 RO-data=1756 RW-data=224 ZI-data=7136  
 Finished: 0 information, 2 warning and 0 error messages.
-".\Objects\mpu9250_spi_int.out" - 0 Error(s), 5 Warning(s).
+".\Objects\mpu9250_spi_int.out" - 0 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC54000_DFP.2.6.0.pack
+                Keil.LPC54000_DFP.2.6.0
+                NXP LPC54000 Series Device Support
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_Debug_In_Flash
-  C:\Keil_v5\ARM\PACK\Keil\LPC54000_DFP\2.2.0\LPCOpen\lpc5411x\chip_5411x\inc
+  C:\Keil_v5\ARM\PACK\Keil\LPC54000_DFP\2.6.0\LPCOpen\lpc5411x\chip_5411x\inc
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

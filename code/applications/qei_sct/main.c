@@ -173,7 +173,7 @@ void pint023_intr_callback(pint_pin_int_t pintr, uint32_t pmatch_status)
 volatile uint32_t gTurnA = 0, gTurnB = 0;
 int main(void)
 {
-    
+    uint32_t sctimerClock;
     /* Init the boards */
     /* attach 12 MHz clock to FLEXCOMM0 (debug console) */
     CLOCK_AttachClk(BOARD_DEBUG_UART_CLK_ATTACH);
@@ -215,116 +215,65 @@ int main(void)
     
     PRINTF("\r\n---Smart Car System Starting!\r\n");
 
-    /* Initial TB6612 Motor Driver */
-    motor_init();
-    
-    /* Intial MPU9250 9-Axis Sensor */
-//    mpu9250_func_init();
-    /* Initial DMA for MPU9250 read values */
-//    mpu9250_dmaRead_init();
-    /* Initial QN902x BLE System */
-    InitBleSubsystem((void *)&Ble_Context);
-    
     /* SCT IN0 */
     //                            0:2       3:4      5         6    7               8            9      10
     //                            FUNC      NULL     I2C_SLEW  0    DIGIMODE        FILTEROFF    NULL   I2CFILTER
-    IOCON_PinMuxSet(IOCON, 0, 23, IOCON_FUNC0 | IOCON_I2C_SLEW | IOCON_DIGITAL_EN | IOCON_INPFILT_ON | IOCON_S_MODE_3CLK | IOCON_OPENDRAIN_EN );
-    IOCON_PinMuxSet(IOCON, 0, 24, IOCON_FUNC0 | IOCON_I2C_SLEW | IOCON_DIGITAL_EN | IOCON_INPFILT_ON | IOCON_S_MODE_3CLK | IOCON_OPENDRAIN_EN );
-    IOCON_PinMuxSet(IOCON, 0, 25, IOCON_FUNC0 | IOCON_I2C_SLEW | IOCON_DIGITAL_EN | IOCON_INPFILT_ON | IOCON_S_MODE_3CLK | IOCON_OPENDRAIN_EN );
-    IOCON_PinMuxSet(IOCON, 0, 26, IOCON_FUNC0 | IOCON_I2C_SLEW | IOCON_DIGITAL_EN | IOCON_INPFILT_ON | IOCON_S_MODE_3CLK | IOCON_OPENDRAIN_EN );
+    IOCON_PinMuxSet(IOCON, 0, 23, IOCON_FUNC0 | IOCON_I2C_SLEW | IOCON_DIGITAL_EN | IOCON_INPFILT_OFF | IOCON_S_MODE_3CLK | IOCON_OPENDRAIN_EN );
+    IOCON_PinMuxSet(IOCON, 0, 24, IOCON_FUNC0 | IOCON_I2C_SLEW | IOCON_DIGITAL_EN | IOCON_INPFILT_OFF | IOCON_S_MODE_3CLK | IOCON_OPENDRAIN_EN );
+    IOCON_PinMuxSet(IOCON, 0, 25, IOCON_FUNC0 | IOCON_I2C_SLEW | IOCON_DIGITAL_EN | IOCON_INPFILT_OFF | IOCON_S_MODE_3CLK | IOCON_OPENDRAIN_EN );
+    IOCON_PinMuxSet(IOCON, 0, 26, IOCON_FUNC0 | IOCON_I2C_SLEW | IOCON_DIGITAL_EN | IOCON_INPFILT_OFF | IOCON_S_MODE_3CLK | IOCON_OPENDRAIN_EN );
     
-//    SCTIMER_GetDefaultConfig((sctimer_config_t*)&sctimerInfo);
-//    /* Switch to 16-bit mode */
-//    sctimerInfo.enableCounterUnify = false;
-//    /* Calculate prescaler and match value for Counter L for 100ms interval */
-////    matchValueL = MSEC_TO_COUNT(100U, sctimerClock);
-////    sctimerInfo.prescale_l = matchValueL / 65536;
-// //   matchValueL = matchValueL / (sctimerInfo.prescale_l + 1) - 1;
-//    matchValueL = 65535;
-//    matchValueH = 65535;
-//    sctimerInfo.prescale_l = 0;
-//    sctimerInfo.prescale_h = 0;
-//    
-//    sctimerInfo.enableBidirection_l = true;
-//    sctimerInfo.enableBidirection_h = true;
-//    
-//    /* Initialize SCTimer module */
-//    SCTIMER_Init(SCT0, (sctimer_config_t*)&sctimerInfo);
-//    
-//    /* Schedule a match event for Counter L every 0.1 seconds */
-//    if (SCTIMER_CreateAndScheduleEvent(SCT0, kSCTIMER_InputRiseEvent, matchValueL, 0, kSCTIMER_Counter_L,
-//                                       (uint32_t *)&eventCounterL) == kStatus_Fail)
-//    {
-//        PRINTF("---Init SCT0 L Failed\r\n");
-//    }
-//    
-//    /* Start the L counter */
-//    SCTIMER_StartTimer(SCT0, kSCTIMER_Counter_L);
+    sctimerClock = CLOCK_GetFreq(kCLOCK_BusClk);
+    
+    SCTIMER_GetDefaultConfig((sctimer_config_t*)&sctimerInfo);
+    /* Switch to 16-bit mode */
+    sctimerInfo.enableCounterUnify = false;
+    
+    /* Calculate prescaler and match value for Counter L for 100ms interval */
+    matchValueL = MSEC_TO_COUNT(100U, sctimerClock);
+    sctimerInfo.prescale_l = matchValueL / 65536;
+    matchValueL = matchValueL / (sctimerInfo.prescale_l + 1) - 1;
+
+    /* Calculate prescaler and match value for Counter H for 200ms interval */
+    matchValueH = MSEC_TO_COUNT(100U, sctimerClock);
+    sctimerInfo.prescale_h = matchValueH / 65536;
+    matchValueH = matchValueH / (sctimerInfo.prescale_h + 1) - 1;
     
     /* Initialize SCTimer module */
-    // bit18 : no autolimit H
-    // bit17 : no autolimit L
-    // 
-    SCT0->CONFIG = (0 << 18) | (0 << 17) | ()
-
-    motor_speed_set(MOTOR_ID_A, 100);
-    motor_speed_set(MOTOR_ID_B, 100);
+    SCTIMER_Init(SCT0, (sctimer_config_t*)&sctimerInfo);
     
-    /* Connect trigger sources to PINT */
-    INPUTMUX_Init(INPUTMUX);
-    INPUTMUX_AttachSignal(INPUTMUX, kPINT_PinInt0, kINPUTMUX_GpioPort0Pin24ToPintsel);
-    /* Turnoff clock to inputmux to save power. Clock is only needed to make changes */
-    INPUTMUX_Deinit(INPUTMUX);
-    /* Initialize PINT */
-    PINT_Init(PINT);
-    /* Setup Pin Interrupt 0 for rising edge */
-    PINT_PinInterruptConfig(PINT, kPINT_PinInt0, PINT_PIN_RISE_EDGE, pint023_intr_callback);
-    /* Enable callbacks for PINT */
-    PINT_EnableCallback(PINT);
+    /* Schedule a match event for Counter L every 0.1 seconds */
+    if (SCTIMER_CreateAndScheduleEvent(SCT0, kSCTIMER_InputRiseEvent, matchValueL, 0, kSCTIMER_Counter_L,
+                                       (uint32_t *)&eventCounterL) == kStatus_Fail)
+    {
+        PRINTF("---Init SCT0 L Failed\r\n");
+    }
+    if (SCTIMER_CreateAndScheduleEvent(SCT0, kSCTIMER_InputRiseEvent, matchValueH, 2, kSCTIMER_Counter_H,
+                                       (uint32_t *)&eventCounterH) == kStatus_Fail)
+    {
+        PRINTF("---Init SCT0 H Failed\r\n");
+    }
+    
+    /* Reset Counter L when Counter L event occurs */
+    SCTIMER_SetupCounterLimitAction(SCT0, kSCTIMER_Counter_L, eventCounterL);
+
+        /* Reset Counter L when Counter L event occurs */
+    SCTIMER_SetupCounterLimitAction(SCT0, kSCTIMER_Counter_H, eventCounterH);
+
+    
+    /* Start the L counter */
+    SCTIMER_StartTimer(SCT0, kSCTIMER_Counter_L);
+    /* Start the H counter */
+    SCTIMER_StartTimer(SCT0, kSCTIMER_Counter_H);
+
     gPhaseACnt = 0;
     
     PRINTF("---Smart Car System Started!\r\n");
-    
-    tb6612_pwma_config(1, 10);
-    tb6612_pwmb_config(1, 10);
+
                     
     while (1)
     {
-        if(gMPU9250UpdateFlag == 1)
-        {
-            gMPU9250UpdateFlag = 0;
-//            mpu9250_value_read((MPU9250_SensorInfo_T *)&g_MPU9250SensorData);
-            //PRINTF("%x %x %x\r", g_MPU9250SensorData.AccX, g_MPU9250SensorData.AccY, g_MPU9250SensorData.AccZ);
-            gAppKalmanPosData.AccelForwardVal = -g_MPU9250SensorData.AccY;
-            gAppKalmanPosData.AccelDownVal    =  g_MPU9250SensorData.AccZ;
-            gAppKalmanPosData.GyroForwardVal  = -g_MPU9250SensorData.GyrX;
-            gAppKalmanAngle                   =  KalmanFilter_Process((KalmanFilter_InputPosData_T *)&gAppKalmanPosData, (KalmanFilter_InputPosData_T *)&gAppKalmanPosDataOffset);
-            
-            gAppInfoStruct.AngleValue = (int)(1000*gAppKalmanAngle);
-            //gAnglePwmOut = Motor_AnglePwmControl(gAppKalmanAngle, gAppKalmanPosData.GyroForwardVal);
-            //Motor_GetSpeedPulse(&gMotorEncCntVal);
-            gAppInfoStruct.MotorLeftEncoderValue  = gMotorEncCntVal.LeftEncCntVal;
-            gAppInfoStruct.MotorRightEncoderValue = gMotorEncCntVal.RightEncCntVal;
-
-            gAppInfoStruct.TimeStamp = gSystemTicks;
-            //PRINTF("gAppKalmanAngle is %d TimeStamp %d\r\n", gAppInfoStruct.AngleValue, gAppInfoStruct.TimeStamp);
-        }
-        ble_process();
-// MGN TEST BLE
-        if(gBLERecvFlag == 1)
-        {
-//            gBLERecvFlag = 0;
-//            motor_speed_set(MOTOR_ID_A, gTurnA);
-//            motor_speed_set(MOTOR_ID_B, gTurnB);
-            if(gBLERecvCnt == 3)
-            {
-                if( (gBLERecvBuf[0] == 0xAA) )
-                {
-                    tb6612_pwma_config(1, gBLERecvBuf[1]);
-                    tb6612_pwmb_config(1, gBLERecvBuf[2]);
-
-                }
-            }
-        }
+        if(gSystemTicks%1000 == 1)
+        PRINTF("eventCounterL %d   eventCounterH %d,  Ticks %d\r\n", eventCounterL, eventCounterH, gSystemTicks);
     }
 }

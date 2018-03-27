@@ -1,0 +1,6 @@
+--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"
+-I.\RTE\_Debug_In_Flash
+-IC:\Keil_v5\ARM\PACK\Keil\LPC54000_DFP\2.6.0\LPCOpen\lpc5411x\chip_5411x\inc
+-IC:\Keil_v5\ARM\CMSIS\Include
+--pd "__UVISION_VERSION SETA 524" --pd "CHIP_LPC5411X SETA 1"
+--list .\listings\startup_lpc54114_cm4.lst --xref -o .\objects\startup_lpc54114_cm4.o --depend .\objects\startup_lpc54114_cm4.d "..\..\csp_lpc54114\startup_LPC54114_cm4.s"

@@ -10,12 +10,13 @@
       <TargetName>Debug In Flash</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC54114J256BD64:M4</Device>
           <Vendor>NXP</Vendor>
-          <PackID>Keil.LPC54000_DFP.2.2.0</PackID>
+          <PackID>Keil.LPC54000_DFP.2.6.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00028000) IRAM2(0x04000000,0x00008000) IROM(0x00000000,0x00040000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -335,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>CPU_LPC54114J256BD64_cm4</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\applications\mpu9250_spi_dma_kalmanfilter;..\..\bsp_smartbalance;..\..\csp_lpc54114</IncludePath>
+              <IncludePath>..\..\applications\mpu9250_spi_dma_kalmanfilter;..\..\bsp_smartbalance;..\..\components\rtt_jlink;..\..\csp_lpc54114</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -588,6 +589,26 @@
               <FileName>pin_mux.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\bsp_smartbalance\pin_mux.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt_jlink</GroupName>
+          <Files>
+            <File>
+              <FileName>RTT_Syscalls_KEIL.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\components\rtt_jlink\RTT_Syscalls_KEIL.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\components\rtt_jlink\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\components\rtt_jlink\SEGGER_RTT_printf.c</FilePath>
             </File>
           </Files>
         </Group>

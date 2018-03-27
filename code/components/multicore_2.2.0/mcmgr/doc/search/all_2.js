@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['mcmgr_20component',['MCMGR Component',['../index.html',1,'']]],
+  ['mcmgr_20api',['MCMGR API',['../group__mcmgr.html',1,'']]],
+  ['mcmgr_5fboot_5fsource_5ft',['mcmgr_boot_source_t',['../group__mcmgr.html#ga9b248a9921d36dbf2ae9f97a9f7fa2f8',1,'mcmgr.h']]],
+  ['mcmgr_5fcore_5fproperty_5ft',['mcmgr_core_property_t',['../group__mcmgr.html#ga8f1bf3fd703cc893f2f25268027049f0',1,'mcmgr.h']]],
+  ['mcmgr_5fcore_5fstatus_5ft',['mcmgr_core_status_t',['../group__mcmgr.html#gace62a1a59ea2e0bba2308b85dd3d3490',1,'mcmgr.h']]],
+  ['mcmgr_5fcore_5ft',['mcmgr_core_t',['../group__mcmgr.html#gab4840600877ad51744dde7c8b640ef0d',1,'mcmgr.h']]],
+  ['mcmgr_5fcore_5ftype_5ft',['mcmgr_core_type_t',['../group__mcmgr.html#gac8ed540d496c628b11acf68ef7f48d25',1,'mcmgr.h']]],
+  ['mcmgr_5fgetcorecount',['MCMGR_GetCoreCount',['../group__mcmgr.html#ga3c4b9d86b64af938a9f9c316028a03b9',1,'mcmgr.h']]],
+  ['mcmgr_5fgetcoreproperty',['MCMGR_GetCoreProperty',['../group__mcmgr.html#gaae6f3eb8620f755a6a42b38952b59a20',1,'mcmgr.h']]],
+  ['mcmgr_5fgetcurrentcore',['MCMGR_GetCurrentCore',['../group__mcmgr.html#gaf09a19de979b8d1cff3c53a4b9f1e233',1,'mcmgr.h']]],
+  ['mcmgr_5fgetstartupdata',['MCMGR_GetStartupData',['../group__mcmgr.html#ga1435aa68ed02c6105fce00b7997a3b3f',1,'mcmgr.h']]],
+  ['mcmgr_5fgetversion',['MCMGR_GetVersion',['../group__mcmgr.html#ga7b84c8f0aeb60f4a30cdc04eb188994f',1,'mcmgr.h']]],
+  ['mcmgr_5finit',['MCMGR_Init',['../group__mcmgr.html#gab18e570ea8c466214b3725785d45aa35',1,'mcmgr.h']]],
+  ['mcmgr_5floadapp',['MCMGR_LoadApp',['../group__mcmgr.html#gaa4a991fe95e7dfb7b58db6fbe584617c',1,'mcmgr.h']]],
+  ['mcmgr_5fmapaddress',['MCMGR_MapAddress',['../group__mcmgr.html#gac026014d30161451b9e6653cf40b5bd1',1,'mcmgr.h']]],
+  ['mcmgr_5fno_5fstartup_5fdata',['MCMGR_NO_STARTUP_DATA',['../group__mcmgr.html#ga794a69cb4c4572708606e9a93be26b81',1,'mcmgr.h']]],
+  ['mcmgr_5fsignalready',['MCMGR_SignalReady',['../group__mcmgr.html#ga5a896060201eec5cf26778b4824bac46',1,'mcmgr.h']]],
+  ['mcmgr_5fsrc_5faddr_5ft',['mcmgr_src_addr_t',['../group__mcmgr.html#gac6ea1dffba7662a1c30eebeb6a229241',1,'mcmgr.h']]],
+  ['mcmgr_5fstart_5fmode_5ft',['mcmgr_start_mode_t',['../group__mcmgr.html#ga47859f00295b5f0859d7e2968c020520',1,'mcmgr.h']]],
+  ['mcmgr_5fstartcore',['MCMGR_StartCore',['../group__mcmgr.html#gac7850a1875bec8499300b1915a79a596',1,'mcmgr.h']]],
+  ['mcmgr_5fstatus_5ft',['mcmgr_status_t',['../group__mcmgr.html#ga5139c4bfe5a3107c1d0a37d488ba7ed2',1,'mcmgr.h']]],
+  ['mcmgr_5fstopcore',['MCMGR_StopCore',['../group__mcmgr.html#gab11c27fda1a646433b0d8cef19de6ee4',1,'mcmgr.h']]],
+  ['mcmgr_5fversion_5fenum',['mcmgr_version_enum',['../group__mcmgr.html#gabbf6e7e7978f537eaa72ea8e95bd0f1f',1,'mcmgr.h']]]
+];

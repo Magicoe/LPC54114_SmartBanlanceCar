@@ -95,10 +95,12 @@
 #define GETCHAR DbgConsole_Getchar
 
 #else /* Select printf, scanf, putchar, getchar of toolchain. */
-#define PRINTF printf
-#define SCANF scanf
+
+#define PRINTF  printf
+#define SCANF   scanf
 #define PUTCHAR putchar
 #define GETCHAR getchar
+
 #endif /* SDK_DEBUGCONSOLE */
 
 /*******************************************************************************
